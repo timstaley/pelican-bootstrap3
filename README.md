@@ -113,6 +113,13 @@ Set the `FAVICON` option in your `pelicanconf.py`. For example: `FAVICON = 'imag
 
 * If `DISPLAY_ARTICLE_INFO_ON_INDEX` is set to _True_, article info (date, tags) will be show under the title for each article, otherwise only title and summary will be shown (default). 
 
+### About Me
+
+You can show a short blurb of text about yourself and a picture. The following two settings are used for this:
+
+* Your 'About Me' paragraph will be whatever the `ABOUT_ME` variable is set to (raw html is allowed)
+* Your avatar can be set by pointing the `AVATAR` variable to the relevant picture (e.g. 'images/profile.png')
+
 ### Sidebar options
 
 The following things can be displayed on the sidebar:
@@ -162,14 +169,6 @@ The theme can show your most recently active GitHub repos in the sidebar. To ena
 * `GITHUB_REPO_COUNT`
 * `GITHUB_SKIP_FORK`
 * `GITHUB_SHOW_USER_LINK`
-
-### Twitter Timeline
-
-The theme can show your twitter timeline in the sidebar. To enable, provide a `TWITTER_USERNAME` and a `TWITTER_WIDGET_ID`.
-
-To get a `TWITTER_WIDGET_ID`, go to: https://twitter.com/settings/widgets and select `Create new`. You'll find the TWITTER_WIDGET_ID under the html or in the site url:
-
-`https://twitter.com/settings/widgets/TWITTER_WIDGET_ID/edit`
 
 ### Bootswatch and other Bootstrap 3 themes
 
