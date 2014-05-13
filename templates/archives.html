@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "list_base.html" %}
 {% block title %}Archives - {{ SITENAME }}{% endblock %}
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
@@ -9,9 +9,10 @@
     {% endif %}
 {% endblock %}
 
-{% block content %}
+{% block icon %} <i class="fa fa-calendar fa-lg"></i> {% endblock %}
+{% block list %}
     <section id="content">
-        <h1>Archives for {{ SITENAME }}</h1>
+        <h1>All posts by date</h1>
 
         <dl>
             {% for article in dates %}

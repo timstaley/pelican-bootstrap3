@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "list_base.html" %}
 {% block title %}Categories - {{ SITENAME }}{% endblock %}
 
 {% block breadcrumbs %}
@@ -10,7 +10,8 @@
     {% endif %}
 {% endblock %}
 
-{% block content %}
+{% block icon %} <i class="fa fa-folder-open fa-large"></i> {% endblock %}
+{% block list %}
     <section id="categories">
         <h1>All Categories for {{ SITENAME }}</h1>
         <div class="panel-group" id="accordion">

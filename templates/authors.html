@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "list_base.html" %}
 
 {% block title %}Authors - {{ SITENAME }}{% endblock %}
 
@@ -11,8 +11,9 @@
     {% endif %}
 {% endblock %}
 
-{% block content %}
-    <h1>Authors on {{ SITENAME }}</h1>
+{% block icon %} <i class="fa fa-users fa-lg"></i> {% endblock %}
+{% block list %}
+    <h1>Authors</h1>
     {% for author, articles in authors|sort %}
         <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> ({{ articles|count }})</li>
     {% endfor %}
