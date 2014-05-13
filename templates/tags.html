@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "list_base.html" %}
 
 {% block title %}Tags - {{ SITENAME }}{% endblock %}
 
@@ -11,9 +11,10 @@
     {% endif %}
 {% endblock %}
 
-{% block content %}
+{% block icon %} <i class="fa fa-tags fa-large"></i> {% endblock %}
+{% block list %}
     <section id="tags">
-        <h1>Tags for {{ SITENAME }}</h1>
+        <h1>Tags</h1>
         <div class="panel-group" id="accordion">
             {%- for tag, articles in tags|sort %}
             <div class="panel panel-default">
