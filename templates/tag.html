@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "blog_index.html" %}
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
     <ol class="breadcrumb">
@@ -9,3 +9,6 @@
     {% endif %}
 {% endblock %}
 {% block title %}{{ tag }} - {{ SITENAME }}{% endblock %}
+{% block content_title %}
+  Posts tagged '{{ tag }}'
+{% endblock %}

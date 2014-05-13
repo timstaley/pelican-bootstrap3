@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "blog_index.html" %}
 {% block title %}{{ category }} - {{ SITENAME }}{% endblock %}
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
@@ -8,4 +8,7 @@
         <li class="active">{{ category }}</li>
     </ol>
     {% endif %}
+{% endblock %}
+{% block content_title %}
+  Posts in the '{{ category }}' category
 {% endblock %}
