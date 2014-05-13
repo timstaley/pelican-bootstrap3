@@ -133,27 +133,8 @@
 
 <div class="container">
     <div class="row">
-        {% if not HIDE_SIDEBAR or SHOW_ABOUTME %}
-        <div class="col-sm-9">
-        {% else %}
-        <div class="col-lg-12">
-        {% endif %}
-        {% block breadcrumbs %}
-        {% endblock %}
-
         {% block content %}
         {% endblock %}
-        </div>
-	{% if ABOUT_ME %}
-        <div class="col-sm-3" id="aboutme">
-            {% include 'includes/aboutme.html' %}
-        </div>
-	{% endif %}
-	{% if not HIDE_SIDEBAR %}
-        <div class="col-sm-3 well well-sm" id="sidebar">
-            {% include 'includes/sidebar.html' %}
-        </div>
-	{% endif %}
     </div>
 </div>
 {% include 'includes/footer.html' %}

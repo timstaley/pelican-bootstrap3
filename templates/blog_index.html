@@ -1,5 +1,13 @@
 {% extends "base.html" %}
+
 {% block content %}
+<div class="col-sm-9 col-md-8 col-md-offset-1">
+  <div class="page-header">
+    <h1>{% block content_title %}
+      Recent posts
+    {% endblock %}</h1>
+  </div>
+
     {% if articles %}
         {% for article in (articles_page.object_list if articles_page else articles) %}
             <article>
@@ -19,4 +27,8 @@
     {% endif %}
 
     {% include 'includes/pagination.html' %}
+</div>
+<div class="col-sm-3 col-lg-2 col-lg-offset-1 well well-sm" id="sidebar">
+    {% include 'includes/sidebar.html' %}
+</div>
 {% endblock content %}
