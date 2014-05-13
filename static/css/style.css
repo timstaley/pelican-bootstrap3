@@ -2,6 +2,11 @@ body {
     padding-top: 70px;
 }
 
+.banner-image {
+        background-size: cover;
+        text-align: center;
+}
+
 #sidebar .list-group, #sidebar .list-group-item {
     background-color: transparent;
 }
