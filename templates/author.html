@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "blog_index.html" %}
 
 {% block title %}Articles by {{ author }} - {{ SITENAME }}{% endblock %}
 
@@ -10,4 +10,8 @@
             <li class="active">{{ AUTHOR }}</li>
         </ol>
     {% endif %}
+{% endblock %}
+
+{% block content_title %}
+  Posts by '{{ author }}'
 {% endblock %}
