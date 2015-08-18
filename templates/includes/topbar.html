@@ -14,8 +14,13 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                {% for title, link in MENUITEMS %}
-                    <li><a href="{{ link }}">{{ title }}</a></li>
+                {% for title, link, icon in MENUITEMS %}
+                    <li><a href="{{ link }}">
+                    {%  if icon %}<i class="fa {{ icon }}"></i><span class="icon-label"> {%  endif %}
+                        {{ title }}
+                    {%  if icon %} </span> {%  endif %}
+                    </a></li>
+
                 {% endfor %}
                 {% if DISPLAY_PAGES_ON_MENU %}
                     {% for p in PAGES %}
@@ -32,9 +37,9 @@
                     {% endfor %}
                 {% endif %}
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ SITEURL }}/{{ BLOG_URL | default('archives.html') }}"><i class="fa fa-th-list"></i><span class="icon-label">Posts</span></a></li>
-            </ul>
+{#            <ul class="nav navbar-nav navbar-right">#}
+{#                <li><a href="{{ SITEURL }}/{{ BLOG_URL | default('archives.html') }}"><i class="fa fa-th-list"></i><span class="icon-label">Posts</span></a></li>#}
+{#            </ul>#}
         </div>
         <!-- /.navbar-collapse -->
     </div>
