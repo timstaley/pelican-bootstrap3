@@ -19,8 +19,12 @@
 {% endblock %}
 
 {% block content %}
+{% if not article.wideformat %}
 <div class="col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-2 ">
   <div class="custom-max-width">
+{% else %}
+      <div class="col-sm-11 col-md-8 col-md-offset-1 ">
+{% endif %}
     <section id="content">
         <article>
             <header class="page-header">
@@ -41,8 +45,12 @@
             {% include 'includes/comments.html' %}
         </article>
     </section>
+{% if not article.wideformat %}
   </div>
 </div>
+{% else %}
+</div>
+{% endif %}
 <div class="col-sm-6 col-sm-offset-3 col-md-3 col-md-offset-0 ">
   <div class="panel">
       <div class="panel-body">
